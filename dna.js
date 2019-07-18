@@ -14,7 +14,7 @@ class DNA {
     }
   }
 
-  crossover(partner) { // partner bir DNA objesi
+  crossover(partner) {
     let childgenes = [];
     let midpoint = floor(random(this.genes.length));
     for (let i = 0; i < this.genes.length; i++) {
