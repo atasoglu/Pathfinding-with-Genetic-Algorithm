@@ -62,5 +62,6 @@ function mousePressed() {
 	if (mouseX > 0 && mouseX < width && mouseY > 0 && mouseY < height) {
 		target.x = mouseX;
 		target.y = mouseY;
+		highScore = 0;
 	}
 }
