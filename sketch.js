@@ -23,7 +23,7 @@ function setup() {
 	createCanvas(500, 500);
 	population = new Population(popSize, mutationRate);
 	target = createVector(width - DIAMETER / 2, height - DIAMETER / 2);
-	timerP = createP("<b>Life time: "+ lifeCounter +"</b>");
+	timerP = createP("<b>Remaining: "+ lifeCounter +"</b>");
 	timerP.position(10, height + 75);
 	generationP = createP("<b>Generation: 1</b>");
 	generationP.position(10, height + 95);
@@ -42,7 +42,7 @@ function draw() {
 	if (lifeCounter > 0) {
 		population.run();
 		lifeCounter--;
-		timerP.html("<b>Remeaning time: "+ lifeCounter +"</b>");
+		timerP.html("<b>Remaining time: "+ lifeCounter +"</b>");
 	}
 	else {
 		lifeCounter = LIFETIME;
