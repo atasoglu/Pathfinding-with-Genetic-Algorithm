@@ -12,7 +12,7 @@ let highScore = 0;
 
 let lifeCounter = LIFETIME;
 let population;
-let popSize = 20;
+let popSize = 50;
 let mutationRate = 0.01;
 
 let target;
@@ -20,7 +20,7 @@ let target;
 let generationP, lifeP, hitP;
 
 function setup() {
-	myCanvas = createCanvas(500, 500);
+	createCanvas(500, 500);
 	population = new Population(popSize, mutationRate);
 	target = createVector(width - DIAMETER / 2, height - DIAMETER / 2);
 	timerP = createP("<b>Life time: "+ lifeCounter +"</b>");
@@ -31,7 +31,6 @@ function setup() {
 	hitP.position(10, height + 115);
 	highScoreP = createP("<b>Highscore: " + highScore + " hit</b>")
 	highScoreP.position(10, height + 135);
-
 	// noStroke();
 }
 function draw() {
@@ -63,6 +62,5 @@ function mousePressed() {
 	if (mouseX > 0 && mouseX < width && mouseY > 0 && mouseY < height) {
 		target.x = mouseX;
 		target.y = mouseY;
-		// console.log(target);
 	}
 }
