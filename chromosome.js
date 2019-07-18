@@ -4,9 +4,9 @@ function euclid(x1, y1, x2, y2) {
 
 class Chromosome {
 	constructor(dna) {
-		this.position = createVector(width / 2, DIAMETER); // konum
-		this.velocity = createVector(); // hız
-		this.acceleration = createVector(); // ivme
+		this.position = createVector(width / 2, DIAMETER); 
+		this.velocity = createVector(); 
+		this.acceleration = createVector();
 
 		this.fitness = 0;
 		if (arguments.length < 1) {
